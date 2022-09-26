@@ -14,7 +14,7 @@
         />
       </div>
     </div>
-    <div class="x">钱</div>
+    <div class="x">神</div>
 
     <div class="j">
       <div class="name">
@@ -71,7 +71,7 @@
   }
   .x {
     font-family: 'SKK_HWXK';
-    font-size: 6.6em;
+    font-size: 8.8em;
     text-align: center;
     margin: 0.46em 0;
     color: var(--skk-red);
@@ -84,9 +84,6 @@
       .username {
         width: 6em;
         font-size: 1.2em;
-      }
-      .beat {
-        // animation: beat 1.5s infinite;
       }
     }
     .m {

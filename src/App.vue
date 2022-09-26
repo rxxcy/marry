@@ -33,6 +33,7 @@ main {
 }
 
 :root {
+  --van-divider-margin: 2px 0 10px 0;
   --skk-red: rgb(159, 69, 68);
   --skk-grey: rgb(242, 242, 242);
   --Ga0_u: #f6f7f8;
