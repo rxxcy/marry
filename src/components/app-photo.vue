@@ -4,7 +4,7 @@
     <div class="t">雨下整夜我的爱溢出就像雨水</div>
     <div class="t">我只取一瓢爱了解</div>
 
-    <div class="big">
+    <div class="big vanishOut">
       <van-image
         lazy-load
         width="100%"
@@ -24,7 +24,7 @@
       </div>
       <div class="u">
         <div class="i" v-for="i in user" :key="i.id">
-          <van-image round width="6em" height="6em" :src="i.avatar" />
+          <van-image round width="7.8em" height="7.8em" :src="i.avatar" />
           <p class="n">
             {{ i.name }}
           </p>
@@ -43,13 +43,13 @@ const user = ref([
   {
     id: 1,
     name: '寻梦',
-    avatar: 'https://qiniu.fdc.xp.yn.cn/uploads/20220926/ba2d3ab2dfda599fa881da9a4a949a7d.jpg',
+    avatar: 'http://p7.qhimg.com/bdr/__85/t019b33324373313025.jpg',
     c: ['长风破浪会有时', '无意苦争春', '扶摇直上九万里'],
   },
   {
     id: 2,
     name: '被梦寻',
-    avatar: 'https://qiniu.fdc.xp.yn.cn/uploads/20220926/ba2d3ab2dfda599fa881da9a4a949a7d.jpg',
+    avatar: 'http://p7.qhimg.com/bdr/__85/t019b33324373313025.jpg',
     c: ['长风破浪会有时', '无意苦争春', '扶摇直上九万里'],
   },
 ])
@@ -88,6 +88,8 @@ const user = ref([
       }
     }
     .u {
+      width: 86%;
+      margin: 0 auto;
       display: flex;
       justify-content: space-around;
       margin-top: 2.8em;
@@ -100,7 +102,7 @@ const user = ref([
           color: #ff6900;
         }
         .c {
-          margin: 6px 0;
+          margin: 10px 0;
         }
       }
     }

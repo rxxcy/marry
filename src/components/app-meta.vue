@@ -3,7 +3,10 @@
     <van-image lazy-load width="100%" src="http://p7.qhimg.com/bdr/__85/t019b33324373313025.jpg" />
     <div class="w">" HELLO 刮风这天我试过握着你手，但偏偏雨渐渐大到我看你不见 "</div>
     <div class="y">
-      <div class="left">如果爱情画在起雾的窗是模糊还是更清楚故事的小黄花</div>
+      <div class="left">
+        <p>如果爱情画在起雾的窗是模糊还是更清楚</p>
+        <p>周杰伦</p>
+      </div>
       <div class="right">
         <van-image
           lazy-load
@@ -19,9 +22,9 @@
     <div class="j">
       <div class="name">
         <span>🎉</span>
-        <div class="username">晴天</div>
+        <div class="username">寻梦</div>
         <span class="heat">❤️</span>
-        <div class="username">喜帖街</div>
+        <div class="username">被寻梦</div>
         <span>🎉</span>
       </div>
       <div class="m">

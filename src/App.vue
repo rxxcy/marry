@@ -3,6 +3,12 @@
     <app-header />
     <app-meta />
     <app-photo />
+    <app-soul />
+    <app-soul />
+    <app-soul />
+    <app-soul />
+    <app-soul />
+    <app-time />
   </main>
 </template>
 
@@ -12,6 +18,8 @@
 import appHeader from './components/app-header.vue'
 import appMeta from './components/app-meta.vue'
 import appPhoto from './components/app-photo.vue'
+import appSoul from './components/app-soul.vue'
+import appTime from './components/app-time.vue'
 </script>
 
 <style lang="scss">
@@ -26,6 +34,7 @@ body {
   color: #34495e;
   background-color: #f7f8fa;
   font-size: 14px;
+  user-select: none;
 }
 main {
   min-height: calc(100vh - ($app-top * 2));
@@ -35,6 +44,7 @@ main {
 :root {
   --van-divider-margin: 2px 0 10px 0;
   --skk-red: rgb(159, 69, 68);
+  --skk-time-bgc: rgb(180, 105, 106);
   --skk-grey: rgb(242, 242, 242);
   --Ga0_u: #f6f7f8;
   --Ga1_u: #f1f2f3;
