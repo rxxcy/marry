@@ -43,14 +43,14 @@ const user = ref([
   {
     id: 1,
     name: '寻梦',
-    avatar: 'https://qiniu.fdc.xp.yn.cn/uploads/20220926/213782123a928f7362f59cd8008b2ca5.jpg',
+    avatar: 'https://qiniu.fdc.xp.yn.cn/uploads/20220926/ba2d3ab2dfda599fa881da9a4a949a7d.jpg',
     c: ['长风破浪会有时', '无意苦争春', '扶摇直上九万里'],
   },
   {
     id: 2,
     name: '被梦寻',
-    avatar: 'https://qiniu.fdc.xp.yn.cn/uploads/20220926/213782123a928f7362f59cd8008b2ca5.jpg',
-    c: ['无意苦争春', '长风破浪会有时', '扶摇直上九万里'],
+    avatar: 'https://qiniu.fdc.xp.yn.cn/uploads/20220926/ba2d3ab2dfda599fa881da9a4a949a7d.jpg',
+    c: ['长风破浪会有时', '无意苦争春', '扶摇直上九万里'],
   },
 ])
 </script>
