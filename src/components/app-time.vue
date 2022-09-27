@@ -1,50 +1,65 @@
 <template>
   <div class="time">
-    <vant-divider :style="{ borderColor: '#34495e' }" />
+    <van-divider :style="{ borderColor: '#34495e' }" />
     <div class="i">
-      <p>今日所邀</p>
+      <!-- <p>今日所邀</p>
       <p>皆是生命中 不同阶段 重要的你们</p>
       <p>这样特殊的一天</p>
-      <p>希望有你的见证 期待有你的参与</p>
+      <p>希望有你的见证 期待有你的参与</p> -->
     </div>
     <div class="t">
-      <p class="e">💒 <span>婚礼时间</span> 💒</p>
+      <!-- <p class="e">💒 <span>婚礼时间</span> 💒</p>
       <p class="o">2020年10月06日 <span class="week">星期四</span></p>
       <p class="o">农历九月十一号</p>
-      <p class="o">17:00</p>
+      <p class="o">17:00</p> -->
       <div class="out">
         <div class="item">
-          <p>{{ d }}</p>
+          <p>{{ day }}</p>
           <p>天</p>
         </div>
         <div class="item">
-          <p>{{ h }}</p>
+          <p>{{ hour }}</p>
           <p>时</p>
         </div>
         <div class="item">
-          <p>{{ i }}</p>
+          <p>{{ minute }}</p>
           <p>分</p>
         </div>
         <div class="item">
-          <p>{{ s }}</p>
+          <p>{{ second }}</p>
           <p>秒</p>
         </div>
       </div>
+
+      <div class="cal">
+        <Calendar
+          backgroundText
+          completion
+          :select-date="selectModeDate"
+          class-name="month"
+          mode="monthRange"
+          :monthRange="['2022-10']"
+          :weeks="weeks"
+        />
+      </div>
     </div>
   </div>
-  {{ timer }}
 </template>
 
 <script setup>
 import { onMounted, onUpdated, reactive, ref } from 'vue'
-import { Divider as vantDivider } from 'vant'
+import { Divider as vanDivider } from 'vant'
+import Calendar from 'mpvue-calendar'
 
 const timer = reactive({ value: null })
 
-const d = ref(0)
-const h = ref(0)
-const i = ref(0)
-const s = ref(0)
+const day = ref(0)
+const hour = ref(0)
+const minute = ref(0)
+const second = ref(0)
+
+const selectModeDate = '2022-10-6'
+const weeks = ['一', '二', '三', '四', '五', '六', '日']
 
 const fine = ref('2022-10-06 17:00:00')
 
@@ -58,19 +73,27 @@ const startCountdown = () => {
   clearInterval(timer.value)
   timer.value = setInterval(() => {
     const n = ~~(new Date().getTime() / 1e3)
-    const total = fine.value - n
-    d.value = ~~(total / (24 * 60 * 60)) //计算整bai数天du数
-    const miao = total - d.value * 24 * 60 * 60 //取得值算出天数后dao剩余的转秒数shu
-    h.value = ~~(miao / (60 * 60)) //计算整数小时数
-    i.value = total - d.value * 24 * 60 * 60 - h.value * 60 * 60 //取得算出小时数后剩余的秒数
-    let min = ~~(i.value / 60) //计算整数分
-    s.value = total - d.value * 24 * 60 * 60 - h.value * 60 * 60 - min * 60
+    let total = fine.value - n
+    let _day = ~~(total / (3600 * 24))
+    total = total - _day * 3600 * 24
+    let _hour = ~~(total / 3600)
+    total = total - _hour * 3600
+    let _minute = ~~(total / 60)
+    let _second = total - _minute * 60
+    // console.log(`${_day}天${_hour}时${_minute}分${_second}秒`)
+    day.value = pop0(_day)
+    hour.value = pop0(_hour)
+    minute.value = pop0(_minute)
+    second.value = pop0(_second)
   }, 1000)
 }
 
-onUpdated(() => {
-  // clearInterval(timer.value)
-})
+const pop0 = x => (x > 9 ? x : `0${x}`)
+
+// onUpdated(() => {
+//   clearInterval(timer.value)
+//   startCountdown()
+// })
 </script>
 
 <style lang="scss" scoped>
@@ -93,6 +116,7 @@ onUpdated(() => {
   .out {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
     .item {
       width: 50px;
       height: 60px;
@@ -108,5 +132,13 @@ onUpdated(() => {
       }
     }
   }
+}
+.cal {
+  .month {
+    margin: 0 auto;
+  }
+}
+:deep(.vc-day-selected:before) {
+  background-color: var(--skk-red) !important;
 }
 </style>

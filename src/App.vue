@@ -1,14 +1,15 @@
 <template>
   <main>
-    <app-header />
+    <!-- <app-header />
     <app-meta />
     <app-photo />
     <app-soul />
     <app-soul />
     <app-soul />
     <app-soul />
-    <app-soul />
-    <app-time />
+    <app-soul /> -->
+    <!-- <app-time /> -->
+    <!-- <app-address /> -->
   </main>
 </template>
 
@@ -20,6 +21,15 @@ import appMeta from './components/app-meta.vue'
 import appPhoto from './components/app-photo.vue'
 import appSoul from './components/app-soul.vue'
 import appTime from './components/app-time.vue'
+import appAddress from './components/app-address.vue'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  // const ws = new WebSocket('ws://localhost:3001')
+  // ws.onopen = () => {
+  //   ws.send(new Date().getTime())
+  // }
+})
 </script>
 
 <style lang="scss">

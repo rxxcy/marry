@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@vitejs/plugin-vue': ^3.1.0
+  howler: ^2.2.3
+  mpvue-calendar: ^3.0.1
   pinia: ^2.0.22
   sass: ^1.55.0
   vant: ^3.6.3
@@ -9,6 +11,8 @@ specifiers:
   vue: ^3.2.37
 
 dependencies:
+  howler: 2.2.3
+  mpvue-calendar: 3.0.1
   pinia: 2.0.22_vue@3.2.39
   vant: 3.6.3_vue@3.2.39
   vue: 3.2.39
@@ -195,6 +199,11 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /core-js/3.25.3:
+    resolution: {integrity: sha512-y1hvKXmPHvm5B7w4ln1S4uc9eV/O5+iFExSRUimnvIph11uaizFR8LFMdONN8hG3P2pipUfX4Y/fR8rAEtcHcQ==}
+    requiresBuild: true
+    dev: false
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
@@ -445,6 +454,10 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /howler/2.2.3:
+    resolution: {integrity: sha512-QM0FFkw0LRX1PR8pNzJVAY25JhIWvbKMBFM4gqk+QdV+kPXOhleWGCB6AiAF/goGjIHK2e/nIElplvjQwhr0jg==}
+    dev: false
+
   /immutable/4.1.0:
     resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
     dev: true
@@ -483,6 +496,13 @@ packages:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
       sourcemap-codec: 1.4.8
+
+  /mpvue-calendar/3.0.1:
+    resolution: {integrity: sha512-dxa+RhxSc3CCo6O/icYN4MsD7+Ml0QF+ZPHorY/qYX0rLFtomT6/ljGsJC0UbdubE1jeDi9CTJHQceX+VdvRtg==}
+    dependencies:
+      core-js: 3.25.3
+      vue: 3.2.39
+    dev: false
 
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
