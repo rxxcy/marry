@@ -1,15 +1,18 @@
 <template>
   <main>
-    <!-- <app-header />
+    <app-header />
     <app-meta />
     <app-photo />
     <app-soul />
     <app-soul />
     <app-soul />
     <app-soul />
-    <app-soul /> -->
-    <!-- <app-time /> -->
-    <!-- <app-address /> -->
+    <app-soul />
+    <app-time />
+    <app-address />
+    <app-danmu />
+    <app-status />
+    <app-footer />
   </main>
 </template>
 
@@ -22,14 +25,9 @@ import appPhoto from './components/app-photo.vue'
 import appSoul from './components/app-soul.vue'
 import appTime from './components/app-time.vue'
 import appAddress from './components/app-address.vue'
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  // const ws = new WebSocket('ws://localhost:3001')
-  // ws.onopen = () => {
-  //   ws.send(new Date().getTime())
-  // }
-})
+import appFooter from './components/app-footer.vue'
+import appDanmu from './components/app-danmu.vue'
+import appStatus from './components/app-status.vue'
 </script>
 
 <style lang="scss">

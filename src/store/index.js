@@ -2,9 +2,28 @@ import { createPinia, defineStore } from 'pinia'
 
 export const pinia = createPinia()
 
-export const userRootStore = defineStore('root', {
+export const useRootStore = defineStore('root', {
   state() {
-    return {}
+    return {
+      count: 0,
+      music: false,
+      danmu: false,
+      danmus: [],
+    }
   },
-  actions: {},
+  actions: {
+    showDanmu() {
+      this.danmu = true
+    },
+    hideDanmu() {
+      this.danmu = false
+    },
+    setCount(count) {
+      this.count = count
+    },
+    pushDanmus(danmus) {
+      this.danmus = danmus
+      this.danmu = true
+    },
+  },
 })

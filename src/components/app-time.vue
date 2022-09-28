@@ -2,16 +2,16 @@
   <div class="time">
     <van-divider :style="{ borderColor: '#34495e' }" />
     <div class="i">
-      <!-- <p>今日所邀</p>
+      <p>今日所邀</p>
       <p>皆是生命中 不同阶段 重要的你们</p>
       <p>这样特殊的一天</p>
-      <p>希望有你的见证 期待有你的参与</p> -->
+      <p>希望有你的见证 期待有你的参与</p>
     </div>
     <div class="t">
-      <!-- <p class="e">💒 <span>婚礼时间</span> 💒</p>
+      <p class="e">💒 <span>婚礼时间</span> 💒</p>
       <p class="o">2020年10月06日 <span class="week">星期四</span></p>
       <p class="o">农历九月十一号</p>
-      <p class="o">17:00</p> -->
+      <p class="o">17:00</p>
       <div class="out">
         <div class="item">
           <p>{{ day }}</p>

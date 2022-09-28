@@ -9,14 +9,14 @@
         lazy-load
         width="100%"
         fit="cover"
-        src="https://qiniu.fdc.xp.yn.cn/uploads/20220926/7df39560c1ba95f9723a35d3cad6deb5.png"
+        src="http://p7.qhimg.com/bdr/__85/t019b33324373313025.jpg"
       />
     </div>
 
     <div class="i">
       <div class="t">
         <p class="e">The story of the two</p>
-        <vant-divider :style="{ borderColor: '#bbb' }" />
+        <van-divider :style="{ borderColor: '#bbb' }" />
         <p class="n">
           <span>斯人若彩虹</span>
           <span>遇上方知有</span>
@@ -36,7 +36,7 @@
 </template>
 
 <script setup>
-import { Divider as vantDivider } from 'vant'
+import { Divider as vanDivider } from 'vant'
 import { ref } from 'vue'
 
 const user = ref([

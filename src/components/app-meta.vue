@@ -17,7 +17,7 @@
         />
       </div>
     </div>
-    <div class="x">神</div>
+    <div class="x">囍</div>
 
     <div class="j">
       <div class="name">

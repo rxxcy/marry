@@ -1,11 +1,11 @@
 <template>
   <div class="address">
-    <!-- <div class="t">
+    <div class="t">
       <p class="o">💒 <span>地址</span> 💒</p>
       <p class="o a">长虹宴会厅</p>
       <p class="o">二楼新厅</p>
-    </div> -->
-    <div class="m"></div>
+    </div>
+    <div class="m">地图</div>
   </div>
 </template>
 
